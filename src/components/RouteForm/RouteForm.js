@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function RouteForm() {
-  const [origin, setOrigin] = useState('R. Prof. ​Bernardo Gutwschager, 255 - Victoria I, Erechim - RS, 99708-765');
+  const [origin, setOrigin] = useState('Praça da Sé - Sé, São Paulo - SP, 01001-000');
   const [destinations, setDestinations] = useState([{ address: '', time: '' }]);
   const [googleMapsUrl, setGoogleMapsUrl] = useState('');
   const [error, setError] = useState('');
