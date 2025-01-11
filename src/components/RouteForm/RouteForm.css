@@ -1,0 +1,67 @@
+.routeform-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .routeform-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .routeform-container form div {
+    margin-bottom: 1rem;
+  }
+  
+  .routeform-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .routeform-container input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .routeform-container button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .routeform-container button:hover {
+    background: #0056b3;
+  }
+  
+  .routeform-container h3 {
+    margin-top: 1.5rem;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .routeform-container a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .routeform-container a:hover {
+    text-decoration: underline;
+  }
+  
