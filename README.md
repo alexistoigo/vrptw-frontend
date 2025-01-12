@@ -1,26 +1,23 @@
 # VRPTW Optimization Frontend
 
-![Interface Screenshot](./images/frontend_screenshot.png)
-
 ## Descrição
-Esta aplicação web em React permite aos usuários inserir pontos de entrega com horários de início e fim para cada endereço, enviar os dados para a API de otimização de rotas (VRPTW) e receber um link do Google Maps com a rota otimizada. A interface possui autenticação simples, formulários intuitivos e é responsiva para dispositivos móveis e desktops.
+Esta aplicação web em React permite aos usuários inserir pontos de entrega com horários de início e fim para cada endereço, enviar os dados para a API de otimização de rotas (VRPTW) e receber um link do Google Maps com a rota otimizada. A interface possui formulários intuitivos e é responsiva para dispositivos móveis e desktops.
 
 ## Arquitetura
 - **React**: Biblioteca principal para construção da interface.
 - **React Router**: Gerenciamento de rotas internas (login e formulário).
 - **Componentes**:
-  - `Login.js`: Tela de autenticação simples com usuário e senha fixos.
   - `RouteForm.js`: Formulário para inserção de origem, destinos e janelas de tempo.
 - **Estilização**: CSS moderno e responsivo definido em `App.css`.
 
 ## Funcionamento da Aplicação
-1. **Login**: Usuário faz login com credenciais fixas.
-2. **Formulário de Rotas**: Após o login, o usuário insere a origem e adiciona múltiplos destinos. Para cada destino, define:
+
+1. **Formulário de Rotas**: O usuário insere a origem e adiciona múltiplos destinos. Para cada destino, define:
    - Endereço
    - Hora Inicial (opcional)
    - Hora Final (opcional)
-3. **Envio para API**: Os dados são convertidos e enviados para a API Python via fetch.
-4. **Recebimento da Rota**: A aplicação recebe um link do Google Maps com a rota otimizada e o exibe ao usuário.
+2. **Envio para API**: Os dados são convertidos e enviados para a API Python via fetch.
+3. **Recebimento da Rota**: A aplicação recebe um link do Google Maps com a rota otimizada e o exibe ao usuário.
 
 ## Como Utilizar
 1. Certifique-se de que a API Python está rodando e acessível.
