@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# VRPTW Optimization Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Interface Screenshot](./images/frontend_screenshot.png)
 
-## Available Scripts
+## Descrição
+Esta aplicação web em React permite aos usuários inserir pontos de entrega com horários de início e fim para cada endereço, enviar os dados para a API de otimização de rotas (VRPTW) e receber um link do Google Maps com a rota otimizada. A interface possui autenticação simples, formulários intuitivos e é responsiva para dispositivos móveis e desktops.
 
-In the project directory, you can run:
+## Arquitetura
+- **React**: Biblioteca principal para construção da interface.
+- **React Router**: Gerenciamento de rotas internas (login e formulário).
+- **Componentes**:
+  - `Login.js`: Tela de autenticação simples com usuário e senha fixos.
+  - `RouteForm.js`: Formulário para inserção de origem, destinos e janelas de tempo.
+- **Estilização**: CSS moderno e responsivo definido em `App.css`.
 
-### `npm start`
+## Funcionamento da Aplicação
+1. **Login**: Usuário faz login com credenciais fixas.
+2. **Formulário de Rotas**: Após o login, o usuário insere a origem e adiciona múltiplos destinos. Para cada destino, define:
+   - Endereço
+   - Hora Inicial (opcional)
+   - Hora Final (opcional)
+3. **Envio para API**: Os dados são convertidos e enviados para a API Python via fetch.
+4. **Recebimento da Rota**: A aplicação recebe um link do Google Maps com a rota otimizada e o exibe ao usuário.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Como Utilizar
+1. Certifique-se de que a API Python está rodando e acessível.
+2. Instale as dependências do frontend:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+````bash
+  npm install
+````
 
-### `npm test`
+3. Execute a aplicação React:
+````bash
+  npm start
+````
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Insira a origem e os destinos com horários desejados, clique em "Otimizar Rota" e visualize a rota otimizada pelo link gerado.
 
-### `npm run build`
+## Imagens do Funcionamento
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Route Form Screen](https://ibb.co/fSD7ZvF)
+*Formulário de rota com campos para inserir endereços e janelas de tempo.*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Route Form Screnn](https://ibb.co/5RGP1hK)
+*Formulário de rotas com campos e edereços preenchidos.*
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Route Screen](https://ibb.co/LS4rqmt)
+*Trajeto no google maps gerado pela API*
